@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>HTML Form</title> 
+    <style>
+        @font-face { font-family: RobotoSlab-Regular; src: url('./fonts/Roboto_Slab/RobotoSlab-Regular.ttf'); } 
+        @font-face { font-family: FaunaOne; src: url('./fonts/Fauna_One/FaunaOne-Regular.ttf'); } 
+        input[type=text],[type=email],[type=number],[type=password],select, textarea{
+            width: 30%;
+            padding: 10px; 
+            box-sizing: border-box; 
+            } 
+        input[type=submit] {
+            width: 30%; 
+            background-color: red;
+            color: white; 
+            padding: 12px 20px; 
+            border: 1px solid ; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            float: center;
+        } 
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center; 
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, blue , white); /* Standard syntax (must be last) */
+        }
+        .required { 
+            color: red;
+        }
+        body{
+            background-color:coral;
+            font-family: FaunaOne;
+        }
+        #Name:invalid,#DOB:invalid{
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+        #Name:invalid, #DOB:invalid{
+            background-image: url(./icons/invalid.png);
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        #Name:valid,#DOB:valid{
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div> <h3 style="font-family: RobotoSlab-Regular; color: white">CSS Form-Pseudo Classes</h3></div> 
+        <form>
+            <div>
+                <input type="text" id="Name" name="Name" placeholder="Enter UserName"  required><span class="required">*</span> 
+            </div>
+            <br>
+            <div>
+                <input type="password" id="pwd" name="pwd" placeholder="Enter password" pattern=".{8,}" required><span class="required">*</span> 
+            </div>
+            <br>
+            <div>
+                <input type="text" id="DOB" name="DOB" placeholder="Enter DOB - dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required><span class="required">*</span> 
+            </div><br>
+            <div>
+                <input type="email" id="Email" name="Email" placeholder="Enter Email" required><span class="required">*</span>
+            </div>
+            <br>
+            <div>
+                <input type="number" id="Mobile" name="Mobile" placeholder ="Enter Mobile Number" required><span class="required">*</span>
+            </div><br>
+            <div>
+                Select Gender: 
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="female"> Fema
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="other"> Other </label>
+            </div>
+            <br>
+            <div>
+                Languages Known: 
+                <input type="checkbox" value="eng">English
+                <input type="checkbox" value="hin">Hindi
+                <input type="checkbox" value="eng">Marathi 
+                <input type="checkbox" value="hin">Tamil
+                <input type="checkbox" value="eng">Telugu
+                <input type="checkbox" value="hin">French 
+            </div>
+            <br>
+            <div>
+                <select name="State" id="State" required>
+                <option value="select">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option> 
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Haveli">Haveli</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option> <option value="Dadar and Nagar Haveli">Dadar and Nagar
+                <option value="Daman and Diu">Daman and Diu</option> <option value="Delhi">Delhi</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshadweep">Lakshadweep</option> 
+                <option value="Puducherry">Puducherry</option> 
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option> 
+                <option value="Maharashtra">Maharashtra</option> 
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option> 
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option> 
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option> 
+                <option value="Telangana">Telangana</option> 
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option> 
+                <option value="Uttarakhand">Uttarakhand</option> 
+                <option value="West Bengal">West Bengal</option>
+                </select><span class="required">*</span> 
+            </div><br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

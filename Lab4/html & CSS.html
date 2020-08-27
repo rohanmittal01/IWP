@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <title>HTML & CSS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Style inputs, select elements and textareas */
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      /* Style email */
+      input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      /* Style date */
+      input[type="date"] {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      /* Style the label to display next to the inputs */
+      label {
+        padding: 12px 12px 12px 0;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        /* display: inline-block; */
+        text-align: right;
+        float: right;
+        width: 100%;
+      }
+      /* Style the submit button */
+      input[type="submit"] {
+        width: 40%;
+        background-color:brown;
+        color: white;
+        padding: 12px 20px;
+        border: 4px solid;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Style the container */
+      .container {
+        border-radius: 10px;
+        border: 1px solid green;
+        padding: 20px;
+        align-self: center;
+      }
+      /* Floating column for labels: 25% width */
+      .col-3 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+      }
+      /* Floating column for inputs: 75% width */
+      .col-9 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="width: 70vw;margin:auto; background-color: azure;">
+      <form>
+        <div class="row">
+          <div class="col-3">
+            <label for="Name"><b>Name</b></label>
+          </div>
+          <div class="col-9">
+            <input type="text" id="Name" name="Name" placeholder="Enter Name" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="Email"><b>Email</b></label>
+          </div>
+          <div class="col-9">
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              placeholder="Enter EmailID"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="gender"><b>Gender</b></label>
+          </div>
+          <div class="col-9">
+            <input type="radio" name="gender" value="male"/> Male<br />
+            <input type="radio" name="gender" value="female" /> Female<br />
+            <input type="radio" name="gender" value="other" /> Other<br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="DOB"><b>DOB</b></label>
+          </div>
+          <div class="col-9">
+            <input type="date" id="DOB" name="DOB" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="CourseName"><b>CourseName</b></label>
+          </div>
+          <div class="col-9">
+            <input
+              type="text"
+              id="CourseName"
+              name="CourseName"
+              placeholder="Enter Course Name"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="CourseID"><b>CourseID</b></label>
+          </div>
+          <div class="col-9">
+            <input
+              type="text"
+              id="CourseID"
+              name="CourseID"
+              placeholder="Enter CourseID"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="Slot"><b>Slot</b></label>
+          </div>
+          <div class="col-9">
+            <select id="Slot" name="Slot" aria-placeholder="Select slot" required>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="B1">B1</option>
+              <option value="B2">B2</option>
+              <option value="C1">C1</option>
+              <option value="C2">C2</option>
+              <option value="D1">D1</option>
+              <option value="D2">D2</option>
+              <option value="E1">E1</option>
+              <option value="E2">E2</option>
+              <option value="F1">F1</option>
+              <option value="F2">F2</option>
+              <option value="G1">G1</option>
+              <option value="G2">G2</option>
+              <option value="TA1">TA1</option>
+              <option value="TA2">TA2</option>
+              <option value="TB1">TB1</option>
+              <option value="TB2">TB2</option>
+              <option value="TC1">TC1</option>
+              <option value="TC2">TC2</option>
+              <option value="TD1">TD1</option>
+              <option value="TD2">TD2</option>
+              <option value="TE1">TE1</option>
+              <option value="TE2">TE2</option>
+              <option value="TF1">TF1</option>
+              <option value="TF2">TF2</option>
+              <option value="TG1">TG1</option>
+              <option value="TG2">TG2</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="Mobile"><b>Mobile</b></label>
+          </div>
+          <div class="col-9">
+            <input type="text" id="Mobile" name="Mobile" placeholder="Enter Mobile Number" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="Remarks">Remarks</label>
+          </div>
+          <div class="col-9">
+            <textarea id="Remarks" name="Remarks" placeholder="Write something.." style="height:100px"></textarea>
+          </div>
+        </div>
+        <div class="row" style="text-align: center;">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
