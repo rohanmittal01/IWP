@@ -17,7 +17,7 @@
     </form>
     <p>
       The Result is : <br />
-      <span id="result2"></span>
+      <span id="result"></span>
     </p>
   </body>
 
@@ -27,8 +27,7 @@
       var n2 = 1;
       var sum;
       var n = parseInt(document.getElementById("num").value);
-      document.getElementById("result2").innerHTML = "";
-      document.getElementById("result2").innerHTML = fibonacci_series(n);
+      document.getElementById("result").innerHTML = fibonacci_series(n);
     }
 
     var fibonacci_series = function (n) {
