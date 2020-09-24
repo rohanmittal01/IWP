@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 6</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>GRADES!!!</h1>
+    <form>
+        Enter Marks: <input type="number" id="num" />
+        <input type="button" onClick="checkGrade()" value="Check" />
+      </p>
+
+      <p>
+        The grade is 
+        <span id="result"></span>
+      </p>
+    </form>
+  </body>
+  <script>
+    function checkGrade()
+    {
+        var n;
+        n = parseInt(document.getElementById("num").value); 
+        if(n>=90)
+        {
+            document.getElementById("result").innerHTML="Wow!! S Grade";
+        }else if(n>=80)
+        {
+            document.getElementById("result").innerHTML="Nice!! A Grade";
+        }else if(n>=70)
+        {
+            document.getElementById("result").innerHTML="B Grade";
+        }else if(n>=60)
+        {
+            document.getElementById("result").innerHTML="C Grade";
+        }else if(n>=50)
+        {
+            document.getElementById("result").innerHTML="D Grade";
+        }else if(n>=40)
+        {
+            document.getElementById("result").innerHTML="E Grade";
+        }else
+        {
+            document.getElementById("result").innerHTML="F Grade";
+        }
+}
+  </script>
+</html>
