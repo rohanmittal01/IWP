@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 6</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      Enter Num: <input type="text" id="num" />
+      <input type="button" onClick="factorial()" value="Factorial" />
+    </form>
+    <p>The Result is : <br>
+        <span id = "result2"></span>
+  </body>
+  <script>
+    function factorial() {
+      var i, no, fact;
+      fact = 1;
+      no = parseInt(document.getElementById("num").value);
+      for (i = 1; i <= no; i++) {
+        fact = fact * i;
+      }
+      document.getElementById("result2").innerHTML = fact;
+    }
+  </script>
+</html>
