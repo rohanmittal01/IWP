@@ -71,7 +71,7 @@
             <span class="key op">Clr</span>
             <span class="key op">C/OFF</span><br>
             <span class="dummy"></span>   
-            <span class="dummy"></span>
+            <span class="key op">N</span>
             <span class="key eq">=</span>
         </div>
     </div>
@@ -91,7 +91,17 @@
                     displayValue = '0';
                     $('#result').text(displayValue);
                 }else if($(this).text() == 'C/OFF'){
-                    displayValue = displayValue.substring(0, displayValue.length - 1);
+                    if(document.getElementById('result').innerHTML=='Invalid Input!'){
+                        displayValue='0'
+                        $('#result').text(displayValue);
+                    }else{
+                        displayValue = document.getElementById('result').innerHTML.substring(0, document.getElementById('result').innerHTML.length - 1);
+                    $('#result').text(displayValue);
+                    }
+                    
+                }else if($(this).text()=='N'){
+                    displayValue = '-1*' + displayValue;
+                    displayValue = eval(displayValue);
                     $('#result').text(displayValue);
                 }
                 else if($(this).text() == '=')
@@ -99,13 +109,18 @@
                     try
                     {
                         // displayValue.replace(/([\d\.]+(,\s*[\d\.]+)+)/g, "[$1]")
-                        displayValue = displayValue.replace(/([\d\.]+([\d\.]+)+)/g, "($1)");
+                        // displayValue = displayValue.replace(/([\d\.]+([\d\.]+)+)/g, "($1)");
                         console.log(displayValue);
-                        displayValue = displayValue.replace('sqrt. ', 'Math.sqrt');
+                        if(displayValue.includes('sq.')){
+                            displayValue = displayValue.replace('sq.', '');
+                            displayValue+='**2';
+                        }else if(displayValue.includes('sqrt.')){
+                            displayValue = displayValue.replace('sqrt.', '');
+                            displayValue+='**0.5';
+                        }
                         displayValue = displayValue.replace('%', '/100 ');
                         displayValue = eval(displayValue);
                         $('#result').text(displayValue);
-                        displayValue = '0';
                     }
                     catch (e)
                     {
