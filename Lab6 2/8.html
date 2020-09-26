@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 6</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="10.html" type="button" style="background-color: gray; color: white; padding:5px; text-decoration: none;">MENU</a>
+    <h1>TEXT AREA</h1>  
+    <textarea id="txt" rows="4" cols="30" ></textarea>  
+    <button onclick="modify()">MODIFY</button>
+  </body>
+  <script>
+      i=0;
+      function modify(){
+          console.log("hi");
+          if(i==0){
+            document.getElementById("txt").style.backgroundColor="black";
+            document.getElementById("txt").style.color="white";
+            document.getElementById("txt").style.textDecorationLine="none";
+            document.getElementById("txt").rows="10";
+
+            document.getElementById("txt").style.border="10px dotted red";
+            document.getElementById("txt").style.borderRadius="10px";
+            i=1;
+          }else{
+            document.getElementById("txt").style.backgroundColor="white";
+            document.getElementById("txt").style.color="black";
+            document.getElementById("txt").style.textDecorationLine="underline";
+            i=0;
+            document.getElementById("txt").rows="7";
+            document.getElementById("txt").style.border="10px dotted green";
+          }
+          
+      }
+  </script>
+</html>

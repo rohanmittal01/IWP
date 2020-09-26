@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 6</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="10.html" type="button" style="background-color: gray; color: white; padding:5px; text-decoration: none;">MENU</a>
+      <h1>PRIME</h1>
+    <form>
+        Enter Number: <input type="number" id="num" />
+        <input type="button" onClick="isPrime()" value="Check" />
+      </p>
+
+      <p>
+        The number is 
+        <span id="result"></span>
+      </p>
+    </form>
+  </body>
+  <script>
+      function isPrime(){
+        var i, n, flag=0;
+        n = parseInt(document.getElementById("num").value);
+        for(i=2;i<n;i++){
+            if(n%i==0){
+                flag=1;
+                document.getElementById("result").innerHTML = " Not a prime";
+                break;
+            }
+        }
+        if(flag==0){
+            document.getElementById("result").innerHTML = "a Prime";
+        }
+      }
+  </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 6</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+      <a href="10.html" type="button" style="background-color: gray; color: white; padding:5px; text-decoration: none;">MENU</a>
+      <h1>ADD, SUBTRACT, MULTIPLY, DIVIDE</h1>
+    <form>
+    Enter the Number 1: <input type="number" id="first" /><br />
+    Enter the Number 2: <input type="number" id="second" /><br />
+      <input type="button" onClick="addBy()" value="Add" />
+      <input type="button" onClick="subtractBy()" value="Subtract" />
+      <input type="button" onClick="multiplyBy()" value="Multiply" />
+      <input type="button" onClick="divideBy()" value="Divide" />
+      <p>
+        Answer: <br />
+        <span id="num1"></span>
+        <span id="sign"></span>
+        <span id="num2"></span> 
+        <span id="result"></span> <br />
+      </p>
+      <script>
+
+        function addBy() {
+          num1 = parseInt(document.getElementById("first").value);
+          num2 = parseInt(document.getElementById("second").value);
+          document.getElementById("num1").innerHTML = document.getElementById("first").value
+          document.getElementById("num2").innerHTML = document.getElementById("second").value + " = "
+          document.getElementById("sign").innerHTML = '+'
+          document.getElementById("result").innerHTML = num1 + num2;
+        }
+
+        function subtractBy() {
+          num1 = parseInt(document.getElementById("first").value);
+          num2 = parseInt(document.getElementById("second").value);
+          document.getElementById("num1").innerHTML = document.getElementById("first").value
+          document.getElementById("num2").innerHTML = document.getElementById("second").value + " = "
+          document.getElementById("sign").innerHTML = '-'
+          document.getElementById("result").innerHTML = num1 - num2;
+        }
+        function multiplyBy() {
+          num1 = parseInt(document.getElementById("first").value);
+          num2 = parseInt(document.getElementById("second").value);
+          document.getElementById("num1").innerHTML = document.getElementById("first").value
+          document.getElementById("num2").innerHTML = document.getElementById("second").value + " = "
+          document.getElementById("sign").innerHTML = '*'
+          document.getElementById("result").innerHTML = num1 * num2;
+        }
+        function divideBy() {
+          num1 = parseInt(document.getElementById("first").value);
+          num2 = parseInt(document.getElementById("second").value);
+          document.getElementById("num1").innerHTML = document.getElementById("first").value
+          document.getElementById("num2").innerHTML = document.getElementById("second").value + " = "
+          document.getElementById("sign").innerHTML = '/'
+          document.getElementById("result").innerHTML = num1 / num2;
+        }
+      </script>
+    </form>
+  </body>
+</html>
