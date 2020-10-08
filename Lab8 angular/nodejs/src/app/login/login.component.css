@@ -1,0 +1,22 @@
+form{
+    display: block;
+}
+
+.form-signin{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.vertically-center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
